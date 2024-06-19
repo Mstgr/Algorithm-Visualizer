@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #125342;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        canvas {
+            background-color: #125342;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.js"></script>
+    <script src="BubbleSort.js"></script>
+</head>
+<body>
+    <main>
+        <canvas id="canvas"></canvas>
+    </main>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var sketch = function(p) {
+            p.setup = function() {
+                p.createCanvas(800, 300);
+            }
+        }
+        new p5(sketch, canvas);
+    </script>
+</body>
+</html>
